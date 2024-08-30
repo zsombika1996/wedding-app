@@ -1,0 +1,19 @@
+.program {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .program-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .program-item {
+    background-color: #dbd293;
+    color: #1d3727;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+  }

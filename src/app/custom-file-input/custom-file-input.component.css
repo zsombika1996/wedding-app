@@ -1,0 +1,17 @@
+.file-input-wrapper {
+    position: relative;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #dbd293;
+    color: #1d3727;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #2b524183;
+  }
