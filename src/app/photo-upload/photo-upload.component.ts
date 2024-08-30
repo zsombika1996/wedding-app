@@ -1,6 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { UploadService } from '../service/upload.service';
+import { UploadService } from '../service/google-drive.service';
 import { CustomFileInputComponent } from '../custom-file-input/custom-file-input.component';
 
 @Component({

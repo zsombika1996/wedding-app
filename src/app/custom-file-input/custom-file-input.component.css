@@ -1,17 +1,29 @@
 .file-input-wrapper {
-    position: relative;
-  }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #dbd293;
-    color: #1d3727;
-    font-weight: 700;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #2b524183;
-  }
+  position: relative;
+  display: inline-block;
+}
+
+button {
+  padding: 12px 24px; /* Larger padding for easier touch */
+  background-color: #dbd293;
+  color: #1d3727;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px; /* Slightly larger radius for a smoother look */
+  cursor: pointer;
+  font-size: 16px; /* Larger font size for better readability */
+  text-align: center;
+  display: inline-block;
+  user-select: none; /* Prevent text selection on double-tap */
+  touch-action: manipulation; /* Optimize touch interactions */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+
+button:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+input[type="file"] {
+  display: none; /* Hide the native file input */
+}

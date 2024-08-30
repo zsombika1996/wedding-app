@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class UploadService {
   private uploadUrl = 'https://europe-west1-adel-zsombor-wedding.cloudfunctions.net/uploadToDrive';
-
+  private getPhotosUrl = 'https://europe-west1-adel-zsombor-wedding.cloudfunctions.net/GetFromGoogleDrive';
   constructor(private http: HttpClient) { }
 
   uploadFile(file: File): Observable<any> {
@@ -39,5 +39,9 @@ export class UploadService {
 
       reader.readAsDataURL(file); // Read the file as Base64
     });
+  }
+
+  loadPhotos(): Observable<any> {
+    return this.http.get<any[]>(this.getPhotosUrl);
   }
 }

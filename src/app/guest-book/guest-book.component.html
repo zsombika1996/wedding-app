@@ -1,1 +1,10 @@
-<p>guest-book works!</p>
+    <app-photo-upload />
+    <div class="guest-book">
+        <h2>Guest Book</h2>
+        <div class="photos">
+          <div *ngFor="let photo of photos" class="photo">
+            <img src="{{photo.webViewLink}}" alt="{{photo.name}}" />
+          </div>
+        </div>
+      </div>
+      <img src="https://drive.google.com/uc?export=download&id=1_VYvOcVmKRnTdRjYSh_A1RbOepCuNl2s" />
