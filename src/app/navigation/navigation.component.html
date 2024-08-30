@@ -1,0 +1,14 @@
+<header>
+    <div class="logo"><a routerLink="">Adél és Zsombor</a></div>
+    <nav>
+      <div class="hamburger" (click)="toggleMenu()">&#9776;</div>
+      <ul class="nav-links" [class.active]="menuOpen">
+        <li><a routerLink="" (click)="toggleMenu()">Főoldal</a></li>
+        <li><a routerLink="/program" (click)="toggleMenu()">Programterv</a></li>
+        <li><a routerLink="/menu" (click)="toggleMenu()">Vacsora Menü</a></li>
+        <li><a routerLink="/guest-book" (click)="toggleMenu()">Vendégkönyv</a></li>
+        <li><a routerLink="#something" (click)="toggleMenu()">Játék</a></li>
+      </ul>
+    </nav>
+  </header>
+  

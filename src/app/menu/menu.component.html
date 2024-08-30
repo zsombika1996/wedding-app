@@ -1,0 +1,9 @@
+<div class="menu-container">
+    <div class="card" *ngFor="let category of menu">
+      <h3>{{ category.category }}</h3>
+      <ul>
+        <li *ngFor="let item of category.items">{{ item }}</li>
+      </ul>
+    </div>
+  </div>
+  

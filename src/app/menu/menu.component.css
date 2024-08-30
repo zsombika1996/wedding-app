@@ -1,0 +1,35 @@
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #1d3727;
+  }
+  
+  .card {
+    background-color: #dbd293;
+    color: #1d3727;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .card h3 {
+    color: #1d3727;
+    margin-bottom: 15px;
+    font-family: 'Lora', serif;
+  }
+  
+  .card ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .card li {
+    margin: 8px 0;
+    font-family: 'Lora', serif;
+  }
+  
