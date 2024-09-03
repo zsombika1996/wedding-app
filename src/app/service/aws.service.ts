@@ -12,8 +12,8 @@ export class AwsService {
     this.s3 = new S3Client({
       region: environment.region,
       credentials: {
-        accessKeyId: environment.Access_key_Id,
-        secretAccessKey: environment.secret_key_id,
+        accessKeyId: environment.accessKeyId,
+        secretAccessKey: environment.secretAccessKey,
       },
     });
   }
