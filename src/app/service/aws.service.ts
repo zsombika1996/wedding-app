@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { S3Client } from '@aws-sdk/client-s3';
-import {environment} from "../../environments/environment"
+import { environment } from "../../environments/environment.development"
 @Injectable({
   providedIn: 'root',
 })
