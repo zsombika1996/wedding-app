@@ -10,10 +10,10 @@ export class AwsService {
 
   constructor() {
     this.s3 = new S3Client({
-      region: environment.region,
+      region: environment.AWS_REGION,
       credentials: {
-        accessKeyId: environment.accessKeyId,
-        secretAccessKey: environment.secretAccessKey,
+        accessKeyId: environment.AWS_ACCESS_KEY_ID,
+        secretAccessKey: environment.AWS_SECRET_ACCESS_KEY,
       },
     });
   }
