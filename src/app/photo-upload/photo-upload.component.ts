@@ -1,30 +1,38 @@
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { UploadService } from '../service/google-drive.service';
+import { FileService } from '../service/file.service';
 import { CustomFileInputComponent } from '../custom-file-input/custom-file-input.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-photo-upload',
   standalone: true,
-  imports: [HttpClientModule,CustomFileInputComponent],
-  providers: [UploadService],
+  imports: [HttpClientModule, CustomFileInputComponent, CommonModule],
+  providers: [FileService],
   templateUrl: './photo-upload.component.html',
   styleUrls: ['./photo-upload.component.css']
 })
 export class UploadComponent {
 
-  constructor(private uploadService: UploadService) { }
+
+  constructor(private fileService: FileService) { }
 
   onFileSelected(file: File) {
     if (file) {
-      this.uploadService.uploadFile(file).subscribe(
-        response => {
-          console.log('File uploaded successfully', response);
-        },
-        error => {
-          console.error('Error uploading file', error);
-        }
-      );
+      const now = new Date();
+      const timestamp = now.toISOString().replace(/[:.-]/g, '');
+      const newFileName = `${timestamp}_${file.name}`;
+      
+      const newFile = new File([file], newFileName, { type: file.type });
+  
+      this.fileService.uploadFile(newFile)
+        .then(response => {
+          console.log('Upload success:', response);
+        })
+        .catch(error => {
+          console.error('Upload error:', error);
+        });
     }
   }
+  
 }
