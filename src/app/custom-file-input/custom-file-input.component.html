@@ -1,5 +1,4 @@
 <div class="file-input-wrapper">
-    <button type="button" (click)="triggerFileInput()">Készíts egy képet</button>
-    <input type="file" #fileInput accept="image/*,video/*" capture="environment" (change)="onFileSelected($event)" hidden>
-  </div>
-  
+  <button type="button" (click)="triggerFileInput()">Készíts egy képet</button>
+  <input type="file" #fileInput accept="image/*" capture="camera" (change)="onFileSelected($event)" hidden>
+</div>
