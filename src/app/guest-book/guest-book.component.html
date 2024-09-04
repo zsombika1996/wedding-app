@@ -1,9 +1,10 @@
-<!-- app.component.html -->
-<div *ngIf="imageUrls.length > 0; else noImages">
-  <div *ngFor="let imageUrl of imageUrls">
-    <img [src]="imageUrl" alt="Image" style="width: 100px; height: auto; margin: 10px;" />
+<app-photo-upload class="photoUpload" />
+<div *ngIf="imageUrls.length > 0; else noImages" class="image-container">
+  <div class="image-card" *ngFor="let imageUrl of imageUrls">
+    <img [src]="imageUrl" alt="Image" />
   </div>
 </div>
 <ng-template #noImages>
   <p>No images found.</p>
 </ng-template>
+

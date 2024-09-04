@@ -1,0 +1,45 @@
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #1d3727;
+  }
+  
+  .image-card {
+    background-color: #dbd293;
+    color: #1d3727;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 120px; /* Default size */
+    text-align: center;
+  }
+  
+  .image-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px; /* Add slight rounding to the images */
+  }
+  
+  /* Make the image and card wider on mobile devices */
+  @media (max-width: 768px) {
+    .image-card {
+      width: calc(100% - 40px); /* Full width minus padding */
+      margin: 0 auto; /* Center the card */
+    }
+  }
+  
+  /* Increase the image and card size on desktop devices */
+  @media (min-width: 769px) {
+    .image-card {
+      width: 300px; /* Larger size for desktop */
+    }
+  }
+
+  .photoUpload{
+    display: flex;
+    justify-content: center;
+  }
+  

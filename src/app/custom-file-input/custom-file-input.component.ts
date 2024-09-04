@@ -24,5 +24,6 @@ export class CustomFileInputComponent {
       this.fileSelected.emit(file);
     }
   }
+  
 }
 
