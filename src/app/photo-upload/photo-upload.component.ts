@@ -17,7 +17,7 @@ import { Router } from '@angular/router';
 export class UploadComponent {
 
 
-  constructor(private fileService: FileService) { }
+  constructor(private fileService: FileService, private router: Router) { }
 
   onFileSelected(file: File) {
     if (file) {
