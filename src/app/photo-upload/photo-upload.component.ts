@@ -31,8 +31,12 @@ export class UploadComponent {
         })
         .catch(error => {
           console.error('Upload error:', error);
+          this.reloadPage();
         });
     }
   }
-  
+  private reloadPage(){
+    this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+      this.router.navigate([this.router.url]);
+    });
 }
