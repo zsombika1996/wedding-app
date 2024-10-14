@@ -41,4 +41,5 @@ export class UploadComponent {
     this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
       this.router.navigate([this.router.url]);
     });
+  }
 }
