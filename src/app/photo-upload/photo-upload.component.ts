@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 import { FileService } from '../service/file.service';
 import { CustomFileInputComponent } from '../custom-file-input/custom-file-input.component';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-photo-upload',
