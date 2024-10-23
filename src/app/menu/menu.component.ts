@@ -15,6 +15,7 @@ export class MenuComponent {
       items: [
         'Zöldfűszeres csirkemell sajtmártással',
         'Lecsós csirkecomb',
+        'Spárgával töltött sertéskaraj',
         'BBQ dagadó',
         'Szaftos, fűszeres sertés oldalas'
       ]

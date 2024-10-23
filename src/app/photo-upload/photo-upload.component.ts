@@ -24,22 +24,18 @@ export class UploadComponent {
       const now = new Date();
       const timestamp = now.toISOString().replace(/[:.-]/g, '');
       const newFileName = `${timestamp}_${file.name}`;
-      
+
       const newFile = new File([file], newFileName, { type: file.type });
-  
-      this.fileService.uploadFile(newFile)
-        .then(response => {
+
+      this.fileService
+        .uploadFile(newFile)
+        .then((response) => {
           console.log('Upload success:', response);
+          window.location.reload();
         })
-        .catch(error => {
+        .catch((error) => {
           console.error('Upload error:', error);
-          this.reloadPage();
         });
     }
-  }
-  private reloadPage(){
-    this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
-      this.router.navigate([this.router.url]);
-    });
   }
 }

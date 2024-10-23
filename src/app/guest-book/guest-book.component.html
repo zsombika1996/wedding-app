@@ -1,10 +1,36 @@
+<h1> Vendégkönyv</h1>
+<h3>Kérjük lepjetek meg minket képekkel, hogy lássuk hogyan éreztétek magatokat az esküvőnkön</h3>
+
+<p (click)="toggleAndroidMenu()"> 
+  Ha Android telefont használsz nyomj ide:
+</p>
+<div *ngIf="androidMenuOpen" class="instructions">
+  <ol>
+    <li>Készíts egy képet a kamerával</li>
+    <li>Nyomj a gombra</li>
+    <li>Válaszd ki a képet</li>
+    <li>Töltsd fel</li>
+  </ol>
+</div>
+
+<p (click)="toggleIphoneMenu()">Ha Iphonet használsz:</p>
+<div *ngIf="iphoneMenuOpen" class="instructions">
+<ol>
+  <li>Nyomj a gombra </li>
+  <li>Készítsd el a képet</li>
+  <li>nyomj rá a használat gombra</li>
+</ol>
+</div>
+
 <app-photo-upload class="photoUpload" />
+
 <div *ngIf="imageUrls.length > 0; else noImages" class="image-container">
   <div class="image-card" *ngFor="let imageUrl of imageUrls">
     <img [src]="imageUrl" alt="Image" />
   </div>
 </div>
+
 <ng-template #noImages>
-  <p>No images found.</p>
+  <p>Egyenlőre nincsen még kép</p>
 </ng-template>
 

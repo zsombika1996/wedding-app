@@ -20,7 +20,16 @@ export class GuestBookComponent implements OnInit {
   async ngOnInit() {
     this.imageUrls = await this.fileService.listImages();
   }
+  androidMenuOpen = false;
+  iphoneMenuOpen = false
 
+  toggleAndroidMenu() {
+    this.androidMenuOpen = !this.androidMenuOpen;
+  }
+
+  toggleIphoneMenu() {
+    this.iphoneMenuOpen = !this.iphoneMenuOpen
+  }
   
 
 }

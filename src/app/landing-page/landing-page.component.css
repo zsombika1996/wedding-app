@@ -16,20 +16,19 @@ body {
   }
   
   .hero {
-    background: url('../assets/images.png') no-repeat center center/cover;
     color: #dbd293;
     text-align: center;
-    padding: 100px 20px;
+    padding: 10px;
   }
   
   .hero-content h1 {
+    text-align: center;
     font-size: 48px;
     margin: 0;
   }
   
   .hero-content p {
     font-size: 24px;
-    margin: 10px 0;
   }
   
   
@@ -46,5 +45,13 @@ body {
     margin: 0 10px;
     text-decoration: none;
     font-weight: 500;
+  }
+
+  .responsive-image {
+    max-width: 100%;  /* The image will not be wider than the container */
+    height: auto;     /* Height adjusts to keep the aspect ratio */
+    display: block;   /* To remove any spacing under the image */
+    margin: 0 auto;   /* Optional: Center the image */
+    border-radius: 10px;
   }
   
